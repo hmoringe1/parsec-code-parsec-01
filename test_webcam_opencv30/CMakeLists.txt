@@ -14,8 +14,8 @@ include_directories(${OpenCV_INCLUDE_DIRS})
 find_package(Qt5 COMPONENTS Core Gui Widgets REQUIRED)
 
 
-cuda_add_executable(camera_test ../main_nano.cpp)
+cuda_add_executable(camera_test ../main_TK1.cpp my_lib.cpp)
 
 target_link_libraries(camera_test Qt5::Widgets)
 target_link_libraries(camera_test Qt5::Core)
-target_link_libraries(camera_test opencv_core opencv_highgui opencv_imgproc opencv_imgcodecs opencv_video opencv_videoio)
+target_link_libraries(camera_test opencv_core opencv_highgui opencv_imgproc)# opencv_imgcodecs opencv_video opencv_videoio)
